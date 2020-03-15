@@ -1,3 +1,7 @@
+# react-bicycle-admin
+
+使用React全家桶+AntD构建共享单车后台管理系统
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

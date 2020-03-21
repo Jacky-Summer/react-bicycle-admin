@@ -11,6 +11,8 @@ import Message from './pages/ui/messages'
 import Tabs from './pages/ui/tabs'
 import Gallery from './pages/ui/gallary'
 import Carousels from './pages/ui/carousel'
+import FormLogin from './pages/form/login'
+import FormRegister from './pages/form/register'
 
 class MyRouter extends Component {
     render() {
@@ -29,6 +31,8 @@ class MyRouter extends Component {
                                 <Route path='/ui/tabs' component={Tabs} />
                                 <Route path='/ui/gallery' component={Gallery} />
                                 <Route path='/ui/carousel' component={Carousels} />
+                                <Route path="/form/login" component={FormLogin} />
+                                <Route path="/form/reg" component={FormRegister} />
                                 <Redirect to="/home" />
                             </Admin> 
                        </Switch>   

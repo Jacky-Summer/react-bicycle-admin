@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Admin from './admin';
+import MyRouter from './router';
 
-ReactDOM.render(<Admin />, document.getElementById('root'));
+ReactDOM.render(<MyRouter />, document.getElementById('root'));
 

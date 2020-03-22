@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,Form,Button,Input,Checkbox,Radio,Select,Switch,DatePicker,TimePicker,Upload,message, InputNumber} from 'antd'
+import {Card,Form,Button,Input,Checkbox,Radio,Select,Switch,DatePicker,TimePicker,Upload, InputNumber} from 'antd'
 import moment from 'moment';
 import { PlusCircleOutlined } from '@ant-design/icons';
 const FormItem = Form.Item;
@@ -126,11 +126,11 @@ class FormRegister extends React.Component{
                                 action="//jsonplaceholder.typicode.com/posts/"
                                 onChange={this.handleChange}
                             >
-                            {this.state.userImg?<img src={this.state.userImg}/>:<PlusCircleOutlined />}
+                            {this.state.userImg?<img src={this.state.userImg} alt=""/>:<PlusCircleOutlined />}
                             </Upload>
                         </FormItem>
                         <FormItem {...offsetLayout}>
-                            <Checkbox name="userImg">我已阅读过<a href="#">协议</a></Checkbox>
+                            <Checkbox name="userImg">我已阅读过<a href="http://www.baidu.com">协议</a></Checkbox>
                         </FormItem>
                         <FormItem {...offsetLayout}>
                             <Button type="primary" onClick={this.handleSubmit}>注册</Button>

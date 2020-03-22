@@ -13,6 +13,8 @@ import Gallery from './pages/ui/gallary'
 import Carousels from './pages/ui/carousel'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
+import BasicTable from './pages/table/basicTabel'
+import HighTable from './pages/table/highTable'
 
 class MyRouter extends Component {
     render() {
@@ -33,6 +35,8 @@ class MyRouter extends Component {
                                 <Route path='/ui/carousel' component={Carousels} />
                                 <Route path="/form/login" component={FormLogin} />
                                 <Route path="/form/reg" component={FormRegister} />
+                                <Route path="/table/basic" component={BasicTable} />
+                                <Route path="/table/high" component={HighTable} />
                                 <Redirect to="/home" />
                             </Admin> 
                        </Switch>   

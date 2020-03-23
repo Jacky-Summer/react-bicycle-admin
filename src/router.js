@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import Common from './common'
 import Login from './pages/login'
 import Home from './pages/home'
 import Admin from './admin'
@@ -15,12 +16,21 @@ import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTabel'
 import HighTable from './pages/table/highTable'
-
+import City from './pages/city'
+import Order from './pages/order'
+import OrderDetail from './pages/order/detail'
 class MyRouter extends Component {
     render() {
         return (
             <Router>
                 <Switch>
+                    <Route path='/login' component={Login} />
+                    <Route path="/common" render={ () => 
+                        <Common>
+                            <Route path="/common/order/detail/:orderId" component={OrderDetail} />
+                        </Common>
+                    }>          
+                    </Route>
                     <Route path='/' render={ () => 
                        <Switch>
                            <Admin>
@@ -37,11 +47,12 @@ class MyRouter extends Component {
                                 <Route path="/form/reg" component={FormRegister} />
                                 <Route path="/table/basic" component={BasicTable} />
                                 <Route path="/table/high" component={HighTable} />
+                                <Route path="/city" component={City} />
+                                <Route path="/order" component={Order} />
                                 <Redirect to="/home" />
                             </Admin> 
                        </Switch>   
                     } />    
-                    <Route path='/login' component={Login} />
                 </Switch>
             </Router>
         );
